@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: starbugs-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: starbugs
+  template:
+    metadata:
+      labels:
+        app: starbugs
+    spec:
+      containers:
+        - name: starbugs
+          image: yaswanth032/starbugs:latest
+          ports:
+            - containerPort: 8081
