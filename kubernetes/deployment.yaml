@@ -16,4 +16,4 @@ spec:
         - name: starbugs
           image: yaswanth032/starbugs:latest
           ports:
-            - containerPort: 8081
+            - containerPort: 3000
